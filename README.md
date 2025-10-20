@@ -72,23 +72,23 @@ The core `TaskManager` component handles all state management and renders the UI
 - The task data is displayed using the Ant Design `<Table>` component.
 
 ### 4.2 Creating and Editing Tasks (Create & Update)  
-Task creation and editing are handled within a shared Ant Design `<Modal>` component.  
+- Task creation and editing are handled within a shared Ant Design `<Modal>` component.  
 
-Data input uses the Ant Design `<Form>` component with `<Input>` and `<Input.TextArea>`.  
+- Data input uses the Ant Design `<Form>` component with `<Input>` and `<Input.TextArea>`.  
 
-The submit button is disabled (`loading={submitting}`) while the request is in progress to prevent duplicate submissions.  
+- The submit button is disabled (`loading={submitting}`) while the request is in progress to prevent duplicate submissions.  
 
 `message.success()` or `message.error()` are used for final outcome feedback.
 
 ### 4.3 Deleting Tasks (Delete)  
-An "Actions" column is added to the `<Table>`.  
+- An "Actions" column is added to the `<Table>`.  
 
-The delete button is wrapped in an Ant Design `<Modal.confirm>` (or similar confirmation component) to require user confirmation before calling the `deleteTask` API function.
+- The delete button is wrapped in an Ant Design `<Modal.confirm>` (or similar confirmation component) to require user confirmation before calling the `deleteTask` API function.
 
 ### 4.4 Searching and Executing Tasks  
-**Searching:** An `<Input.Search>` component is implemented above the table to filter tasks client-side or trigger a search API call based on the task name.  
+- **Searching:** An `<Input.Search>` component is implemented above the table to filter tasks client-side or trigger a search API call based on the task name.  
 
-**Execution:** A "Run" button is added to the "Actions" column. Clicking this calls the task execution endpoint (`/tasks/execute/{id}`). The command output is displayed in a separate modal using a `<pre>` tag to preserve the original terminal-like formatting.
+- **Execution:** A "Run" button is added to the "Actions" column. Clicking this calls the task execution endpoint (`/tasks/execute/{id}`). The command output is displayed in a separate modal using a `<pre>` tag to preserve the original terminal-like formatting.
 
 ## 5 Web UI Output  
 The final running application provides a responsive table view for task management, allowing users to view, create, edit, and delete tasks seamlessly. The placeholder data is displayed upon initial load, confirming successful frontend operation.
