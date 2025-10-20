@@ -64,15 +64,12 @@ TypeScript interfaces for all key data structures, such as `Task` and `TaskExecu
 The core `TaskManager` component handles all state management and renders the UI using Ant Design components.
 
 ### 4.1 Listing Tasks (Read)  
-The `useEffect` hook is used to trigger the `getTasks` function upon component mount.  
 
-`useState` tracks the list of tasks, a loading boolean, and a potential error object.  
-
-During loading, an Ant Design `<Spin size="large" />` indicator is displayed.  
-
-On error, an `<Alert type="error" />` message provides user feedback.  
-
-The task data is displayed using the Ant Design `<Table>` component.
+- The `useEffect` hook is used to trigger the `getTasks` function upon component mount.  
+- `useState` tracks the list of tasks, a loading boolean, and a potential error object.  
+- During loading, an Ant Design `<Spin size="large" />` indicator is displayed.  
+- On error, an `<Alert type="error" />` message provides user feedback.  
+- The task data is displayed using the Ant Design `<Table>` component.
 
 ### 4.2 Creating and Editing Tasks (Create & Update)  
 Task creation and editing are handled within a shared Ant Design `<Modal>` component.  
@@ -92,10 +89,11 @@ The delete button is wrapped in an Ant Design `<Modal.confirm>` (or similar conf
 **Searching:** An `<Input.Search>` component is implemented above the table to filter tasks client-side or trigger a search API call based on the task name.  
 
 **Execution:** A "Run" button is added to the "Actions" column. Clicking this calls the task execution endpoint (`/tasks/execute/{id}`). The command output is displayed in a separate modal using a `<pre>` tag to preserve the original terminal-like formatting.
-<img width="2880" height="1800" alt="image" src="https://github.com/user-attachments/assets/c72375a6-638e-4949-a077-30b66411a9cc" />
-
 
 ## 5 Web UI Output  
 The final running application provides a responsive table view for task management, allowing users to view, create, edit, and delete tasks seamlessly. The placeholder data is displayed upon initial load, confirming successful frontend operation.
+
+<img width="2880" height="1800" alt="image" src="https://github.com/user-attachments/assets/c72375a6-638e-4949-a077-30b66411a9cc" />
+
 
 
