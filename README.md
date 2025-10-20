@@ -1,4 +1,4 @@
-###Task Manager UI (React Frontend)
+##Task Manager UI (React Frontend)
 This project constitutes the interactive web user interface for the Task Manager application, built using React, TypeScript, and the Ant Design component library. It serves as the client layer, consuming the RESTful APIs exposed by the Spring Boot backend.
 
 1. Project Goal
